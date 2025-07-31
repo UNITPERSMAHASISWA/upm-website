@@ -1,0 +1,113 @@
+<?php include 'includes/header.php'; ?>
+
+<style>
+    .contact-container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .contact-container h2 {
+        text-align: center;
+        color: var(--primary);
+        margin-bottom: 20px;
+    }
+
+    .contact-container p {
+        text-align: center;
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+    }
+
+    .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+    }
+
+    .contact-list li {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: start;
+        gap: 12px;
+        padding: 12px 16px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        font-size: 15px;
+        color: var(--text-main);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    .contact-list li:hover {
+        transform: translateY(-4px);
+        background: #fff5f5;
+    }
+
+    .contact-list li strong {
+        color: var(--primary);
+        text-align: right;
+    }
+
+    .contact-list a {
+        color: var(--primary-hover);
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .contact-list a:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .contact-container {
+            padding: 20px;
+        }
+        .contact-list li {
+            grid-template-columns: 1fr;
+            font-size: 14px;
+        }
+        .contact-list li strong {
+            text-align: left;
+        }
+    }
+</style>
+
+<div class="contact-container">
+    <h2>Kontak Unit Pers Mahasiswa (UPM)</h2>
+    <p>Jika kamu ingin mengenal lebih jauh atau menjalin kerja sama dengan kami, silakan hubungi melalui kontak di bawah ini:</p>
+
+    <ul class="contact-list">
+        <li><strong>Email</strong> 
+            <a href="mailto:unitpersmahasiswaupm@gmail.com">unitpersmahasiswaupm@gmail.com</a>
+        </li>
+        <li><strong>Instagram</strong> 
+            <div>
+                <a href="https://instagram.com/unitpersmahasiswa" target="_blank">@unitpersmahasiswa</a><br>
+                <a href="https://instagram.com/ukm.upmummi" target="_blank">@ukm.upmummi</a>
+            </div>
+        </li>
+        <li><strong>WhatsApp</strong> 
+            <a href="https://wa.me/6285141749759" target="_blank">+62 851-4174-9759</a>
+        </li>
+        <li><strong>Alamat</strong> 
+            <a href="https://maps.google.com/?q=Universitas+Muhammadiyah+Sukabumi" target="_blank">
+                Kampus Universitas Muhammadiyah Sukabumi, Jl. R. Syamsudin SH No.50, Sukabumi
+            </a>
+        </li>
+    </ul>
+
+    <p>Jangan ragu untuk menghubungi kami. Kami terbuka untuk kolaborasi, diskusi, dan berbagi informasi!</p>
+</div>
+
+<?php include 'includes/footer.php'; ?>

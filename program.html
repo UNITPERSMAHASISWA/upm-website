@@ -1,0 +1,191 @@
+<?php include 'includes/header.php'; ?>
+
+<style>
+    .page-title {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: var(--primary);
+        font-size: 28px;
+    }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Card besar tiap bagian */
+    .section-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-bottom: 40px;
+        border-top: 8px solid var(--primary);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .section-card h3 {
+        color: var(--primary);
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    /* Grid sub-card */
+    .sub-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    /* Sub-card program */
+    .sub-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        padding: 20px;
+        border-left: 5px solid var(--primary);
+        transition: transform 0.3s;
+    }
+    .sub-card:hover { transform: translateY(-5px); }
+    .sub-card h4 {
+        color: var(--primary);
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .sub-card p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: var(--text-secondary);
+    }
+    .sub-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .sub-card ul li {
+        position: relative;
+        margin-bottom: 6px;
+        font-size: 14px;
+        padding-left: 18px;
+    }
+    .sub-card ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: bold;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .page-title { font-size: 22px; }
+        .section-card { padding: 20px; }
+        .sub-card h4 { font-size: 16px; }
+        .sub-card p, .sub-card ul li { font-size: 13px; }
+    }
+</style>
+
+<h2 class="page-title">Program Kerja Unit Pers Mahasiswa (UPM) 2025/2026</h2>
+<div class="container">
+
+    <!-- A. Departemen Keorganisasian -->
+    <div class="section-card">
+        <h3>A. Departemen Keorganisasian</h3>
+        <div class="sub-grid">
+            <div class="sub-card">
+                <h4>1. Penelitian dan Pengembangan (Litbang)</h4>
+                <p>Berperan dalam melakukan riset untuk meningkatkan kualitas organisasi.</p>
+                <ul>
+                    <li>PPK Ormawa</li>
+                    <li>Literasi dan Kajian Internal UPM</li>
+                    <li>Studi Banding</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>2. Manajemen Sumber Daya Manusia (MSDM)</h4>
+                <p>Mempersiapkan anggota untuk menjadi pers mahasiswa melalui soft skill dan hard skill.</p>
+                <ul>
+                    <li>Masa Pengkaderan Organisasi (Open Recruitment, Magang, MPO on-site, Pelantikan, PDH)</li>
+                    <li>Pelatihan Anggota Muda</li>
+                    <li>Musyawarah Besar</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>3. Relasi dan Interaksi Publik</h4>
+                <p>Menjadi penghubung UPM dengan pihak luar dan internal, serta mengelola media sosial.</p>
+                <ul>
+                    <li>Pelantikan Pengurus UPM</li>
+                    <li>Dies Natalis</li>
+                    <li>Sapa Media (kunjungan ke media pers)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- B. Bidang Pemberitaan -->
+    <div class="section-card">
+        <h3>B. Bidang Pemberitaan</h3>
+        <div class="sub-grid">
+            <div class="sub-card">
+                <h4>1. Redaksi</h4>
+                <ul>
+                    <li>Penulisan Naskah Berita</li>
+                    <li>Pelatihan Menulis Redaksi</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>2. Penyunting</h4>
+                <ul>
+                    <li>Penyuntingan Naskah Berita</li>
+                    <li>Pelatihan Penyuntingan Naskah</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>3. Artistik</h4>
+                <ul>
+                    <li>Produksi Karya Visual Media</li>
+                    <li>Pelatihan Fotografi, Videografi, dan Desain</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>4. Media</h4>
+                <ul>
+                    <li>Manajemen Media Sosial</li>
+                    <li>Sudut Jurnal</li>
+                    <li>Podcast</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>5. Koordinator Liputan</h4>
+                <ul>
+                    <li>Koordinasi Jurnalis Lapangan</li>
+                    <li>Pelatihan Liputan dan Etika Jurnalistik</li>
+                    <li>Evaluasi Liputan</li>
+                </ul>
+            </div>
+
+            <div class="sub-card">
+                <h4>6. Riset Data dan Informasi</h4>
+                <p>Mencari dan mengolah ide konten berdasarkan data sosial, ekonomi, politik, dsb.</p>
+                <ul>
+                    <li>Konten: Editorial, Education News, Podcast, dan lainnya</li>
+                    <li>Segmentasi konten mengikuti BBC News</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<?php include 'includes/footer.php'; ?>

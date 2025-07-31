@@ -1,0 +1,192 @@
+<?php include 'includes/header.php'; ?>
+
+<style>
+    /* Page Title */
+    .page-title {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: var(--primary);
+        font-size: 28px;
+    }
+
+    /* Container */
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Big Card */
+    .big-card {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-bottom: 40px;
+        border-top: 8px solid var(--primary);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .big-card h2 {
+        text-align: center;
+        color: var(--primary);
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+
+    /* Grid Layout */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    /* Small Card */
+    .small-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        border-left: 5px solid var(--primary);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .small-card:hover { transform: translateY(-5px); }
+    .small-card h3 {
+        color: var(--primary);
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+    .small-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        display: inline-block;
+    }
+    .small-card ul li {
+        position: relative;
+        margin-bottom: 8px;
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    .small-card ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--primary);
+        font-weight: bold;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .page-title { font-size: 22px; margin: 30px 0 15px; }
+        .big-card { padding: 20px; }
+        .small-card h3 { font-size: 16px; }
+        .small-card ul li { font-size: 14px; }
+    }
+</style>
+
+<h2 class="page-title">Struktur Kepengurusan UPM 2025/2026</h2>
+<div class="container">
+
+    <!-- BPH -->
+    <div class="big-card">
+        <h2>Badan Pengurus Harian (BPH)</h2>
+        <div class="grid">
+            <div class="small-card"><h3>Ketua Umum</h3><ul><li>Fitriya Zein Nurhayati</li></ul></div>
+            <div class="small-card"><h3>Wakil Ketua Umum</h3><ul><li>Muhammad Mirza Ridhodhinillah</li></ul></div>
+            <div class="small-card"><h3>Sekretaris Umum</h3><ul><li>Siti Hilyah Lestari</li></ul></div>
+            <div class="small-card"><h3>Bendahara Umum</h3><ul><li>Rahmah Silvia S</li></ul></div>
+        </div>
+    </div>
+
+    <!-- Departemen Organisasi -->
+    <div class="big-card">
+        <h2>Departemen Organisasi</h2>
+        <div class="grid">
+            <div class="small-card"><h3>Litbang</h3>
+                <ul>
+                    <li>Abdhina</li>
+                    <li>Nurrifani</li>
+                    <li>April</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>Relasi & Interaksi Publik</h3>
+                <ul>
+                    <li>Kgs. Moch Alfarizi</li>
+                    <li>Bunga Nurholik</li>
+                    <li>Arinal</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>Riset Data & Informasi</h3>
+                <ul>
+                    <li>Fauzan</li>
+                    <li>Riana</li>
+                    <li>Lulum Saibah</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>MSDM</h3>
+                <ul>
+                    <li>Rahma Aulia</li>
+                    <li>Rafalna</li>
+                    <li>Dapit Saepudin</li>
+                    <li>Levya Hanifah</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bidang-Bidang -->
+    <div class="big-card">
+        <h2>Bidang-Bidang</h2>
+        <div class="grid">
+            <div class="small-card"><h3>Korlip</h3>
+                <ul>
+                    <li>Shela Setiaputri</li>
+                    <li>Awamirillah Q</li>
+                    <li>Ai Sulistika Urma</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>Redaksi</h3>
+                <ul>
+                    <li>Ladyna Shanda</li>
+                    <li>Fahriza</li>
+                    <li>Nazla</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>Penyunting</h3>
+                <ul>
+                    <li>Sabrina</li>
+                    <li>M Ilham Syaputra</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>Media</h3>
+                <ul>
+                    <li>Resita Alya Gita W</li>
+                    <li>Nasrullah</li>
+                    <li>Agung Saputra</li>
+                    <li>Reva Tunazla</li>
+                </ul>
+            </div>
+            <div class="small-card"><h3>Artistik</h3>
+                <ul>
+                    <li>Ekanita Nurazizah</li>
+                    <li>M Raka Alifia Rahmat</li>
+                    <li>Fadli Akbar Deliansyah</li>
+                    <li>Muthia Raudhatul A</li>
+                    <li>Zidan Prawira Firman</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<?php include 'includes/footer.php'; ?>

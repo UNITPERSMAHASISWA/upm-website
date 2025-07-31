@@ -1,0 +1,147 @@
+<?php // index.php ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Pers Mahasiswa UMMI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #800000;
+            --primary-hover: #a52a2a;
+            --text-main: #333;
+            --text-secondary: #555;
+            --text-footer: #777;
+            --bg-gradient: linear-gradient(to bottom, #f0f0f0, #ffffff);
+            --bg-footer: #f9f9f9;
+            --shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Reset & Base Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .hero h3 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* Menu Navigasi */
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--primary);
+            padding: 25px 15px;
+            min-height: 80px;
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: var(--shadow);
+        }
+
+        .menu-card:hover {
+            background: var(--primary-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+            color: var(--text-footer);
+            font-size: 14px;
+            background: var(--bg-footer);
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsive Font */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 18px; }
+            .hero h3 { font-size: 24px; }
+            .tagline { font-size: 14px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 30px 20px; }
+            .menu-card { font-size: 13px; padding: 20px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Selamat datang di website resmi</h2>
+            <h3>Unit Pers Mahasiswa UMMI</h3>
+            <p class="tagline">Be Smart, Be Brave, Be Honour</p>
+        </section>
+
+        <!-- Menu Navigasi -->
+        <div class="menu-container">
+            <a href="tentang.php" class="menu-card">Tentang</a>
+            <a href="visi-misi-tujuan-fungsi.php" class="menu-card">Visi Misi, Tujuan & Fungsi</a>
+            <a href="struktur.php" class="menu-card">Struktur Kepengurusan UPM 2025/2026</a>
+            <a href="program.php" class="menu-card">Program Kerja</a>
+            <a href="kontak.php" class="menu-card">Kontak</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Unit Pers Mahasiswa UMMI. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
