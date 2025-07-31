@@ -1,94 +1,136 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kerja UPM 2025/2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
-    .page-title {
-        text-align: center;
-        margin: 40px 0 20px;
-        color: var(--primary);
-        font-size: 28px;
-    }
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-    }
+    <style>
+        :root {
+            --primary: #800000;
+            --primary-hover: #A52A2A;
+            --text-main: #333;
+            --text-secondary: #555;
+        }
 
-    /* Card besar tiap bagian */
-    .section-card {
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-        padding: 30px;
-        margin-bottom: 40px;
-        border-top: 8px solid var(--primary);
-        animation: fadeIn 0.5s ease-in-out;
-    }
-    .section-card h3 {
-        color: var(--primary);
-        margin-bottom: 20px;
-        font-size: 22px;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+            color: var(--text-main);
+        }
 
-    /* Grid sub-card */
-    .sub-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-    }
+        .page-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: var(--primary);
+            font-size: 28px;
+        }
 
-    /* Sub-card program */
-    .sub-card {
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        padding: 20px;
-        border-left: 5px solid var(--primary);
-        transition: transform 0.3s;
-    }
-    .sub-card:hover { transform: translateY(-5px); }
-    .sub-card h4 {
-        color: var(--primary);
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-    .sub-card p {
-        font-size: 14px;
-        margin-bottom: 10px;
-        color: var(--text-secondary);
-    }
-    .sub-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .sub-card ul li {
-        position: relative;
-        margin-bottom: 6px;
-        font-size: 14px;
-        padding-left: 18px;
-    }
-    .sub-card ul li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: var(--primary);
-        font-weight: bold;
-    }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    /* Animasi */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+        /* Card besar tiap bagian */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-top: 8px solid var(--primary);
+            animation: fadeIn 0.5s ease-in-out;
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        .page-title { font-size: 22px; }
-        .section-card { padding: 20px; }
-        .sub-card h4 { font-size: 16px; }
-        .sub-card p, .sub-card ul li { font-size: 13px; }
-    }
-</style>
+        .section-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        /* Grid sub-card */
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Sub-card program */
+        .sub-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .sub-card:hover { transform: translateY(-5px); }
+
+        .sub-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .sub-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .sub-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sub-card ul li {
+            position: relative;
+            margin-bottom: 6px;
+            font-size: 14px;
+            padding-left: 18px;
+        }
+
+        .sub-card ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #777;
+            font-size: 14px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title { font-size: 22px; }
+            .section-card { padding: 20px; }
+            .sub-card h4 { font-size: 16px; }
+            .sub-card p, .sub-card ul li { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
 
 <h2 class="page-title">Program Kerja Unit Pers Mahasiswa (UPM) 2025/2026</h2>
 <div class="container">
@@ -188,4 +230,9 @@
 
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<footer>
+    &copy; 2025 Unit Pers Mahasiswa UMMI. All rights reserved.
+</footer>
+
+</body>
+</html>
