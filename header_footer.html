@@ -138,24 +138,27 @@
                 padding: 6px 10px;
                 font-size: 14px;
             }
+            footer {
+                font-size: 13px;
+                padding: 15px 0;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1><a href="index.php">Unit Pers Mahasiswa UMMI</a></h1>
+    <h1><a href="index.html">Unit Pers Mahasiswa UMMI</a></h1>
     <div class="tagline">Be Smart, Be Brave, Be Honour</div>
     
-    <?php $current_page = basename($_SERVER['PHP_SELF']); ?>
     <nav>
         <ul>
-            <li><a href="index.php" class="<?= $current_page == 'index.php' ? 'active' : '' ?>">Beranda</a></li>
-            <li><a href="tentang.php" class="<?= $current_page == 'tentang.php' ? 'active' : '' ?>">Tentang</a></li>
-            <li><a href="visi-misi-tujuan-fungsi.php" class="<?= $current_page == 'visi-misi-tujuan-fungsi.php' ? 'active' : '' ?>">Visi & Misi</a></li>
-            <li><a href="struktur.php" class="<?= $current_page == 'struktur.php' ? 'active' : '' ?>">Struktur Kepengurusan 2025/2026</a></li>
-            <li><a href="program.php" class="<?= $current_page == 'program.php' ? 'active' : '' ?>">Program Kerja</a></li>
-            <li><a href="kontak.php" class="<?= $current_page == 'kontak.php' ? 'active' : '' ?>">Kontak</a></li>
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="visi-misi-tujuan-fungsi.html">Visi & Misi</a></li>
+            <li><a href="struktur.html">Struktur Kepengurusan 2025/2026</a></li>
+            <li><a href="program.html">Program Kerja</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
 </header>
@@ -166,22 +169,3 @@
 
 </body>
 </html>
-
-<style>
-    footer {
-        text-align: center;
-        padding: 20px 0;
-        margin-top: auto;
-        color: #777;
-        font-size: 14px;
-        background: #f9f9f9;
-        border-top: 1px solid #eee;
-    }
-
-    @media (max-width: 600px) {
-        footer {
-            font-size: 13px;
-            padding: 15px 0;
-        }
-    }
-</style>
