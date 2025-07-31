@@ -1,86 +1,189 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi, Misi, Tujuan & Fungsi - UPM UMMI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
-    .content-wrapper {
-        max-width: 900px;
-        margin: 50px auto;
-        background: #ffffff;
-        padding: 40px 30px;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        animation: fadeIn 0.6s ease-in-out;
-    }
+    <style>
+        :root {
+            --primary: #800000;
+            --primary-hover: #A52A2A;
+            --text-main: #333;
+            --bg-gradient: linear-gradient(to bottom, #f0f0f0, #ffffff);
+            --bg-footer: #f9f9f9;
+        }
 
-    .content-wrapper h2 {
-        text-align: center;
-        color: var(--primary);
-        font-size: 26px;
-        margin-bottom: 30px;
-        position: relative;
-    }
-    .content-wrapper h2::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 3px;
-        background: var(--primary);
-        margin: 10px auto 0;
-        border-radius: 3px;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    .content-wrapper h3 {
-        color: var(--primary);
-        font-size: 20px;
-        margin-top: 30px;
-        margin-bottom: 12px;
-    }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 25px 20px 15px;
+            background: linear-gradient(to right, var(--primary), var(--primary-hover));
+            color: #fff;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+        header h1 a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        header h1 a:hover { color: #ffdede; }
+        .tagline {
+            margin-top: 5px;
+            color: #ffdede;
+            font-size: 14px;
+        }
 
-    .content-wrapper p {
-        line-height: 1.8;
-        text-align: justify;
-        color: var(--text-main);
-        margin-bottom: 15px;
-    }
+        /* Navigasi */
+        nav { margin-top: 15px; }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        nav a:hover,
+        nav a.active {
+            background: var(--primary-hover);
+        }
 
-    /* List Style untuk Misi & Tujuan */
-    .content-wrapper ul {
-        list-style: none;
-        padding-left: 0;
-        margin-bottom: 15px;
-    }
+        /* Konten */
+        .content-wrapper {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            animation: fadeIn 0.6s ease-in-out;
+        }
 
-    .content-wrapper ul li {
-        position: relative;
-        padding-left: 28px;
-        margin-bottom: 10px;
-        line-height: 1.7;
-    }
+        .content-wrapper h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 26px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .content-wrapper h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
 
-    .content-wrapper ul li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--primary);
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 1.3;
-    }
+        .content-wrapper h3 {
+            color: var(--primary);
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
 
-    /* Animasi Fade In */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+        .content-wrapper p {
+            line-height: 1.8;
+            text-align: justify;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        .content-wrapper { padding: 30px 20px; margin: 30px auto; }
-        .content-wrapper h2 { font-size: 22px; }
-        .content-wrapper h3 { font-size: 18px; }
-        .content-wrapper p { font-size: 14px; }
-    }
-</style>
+        /* List Style */
+        .content-wrapper ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+        .content-wrapper ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        .content-wrapper ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+            color: #777;
+            font-size: 14px;
+            background: var(--bg-footer);
+            border-top: 1px solid #eee;
+        }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 22px; }
+            .content-wrapper { padding: 30px 20px; margin: 30px auto; }
+            .content-wrapper h2 { font-size: 22px; }
+            .content-wrapper h3 { font-size: 18px; }
+            .content-wrapper p { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><a href="index.html">Unit Pers Mahasiswa UMMI</a></h1>
+    <div class="tagline">Be Smart, Be Brave, Be Honour</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="visi-misi-tujuan-fungsi.html" class="active">Visi & Misi</a></li>
+            <li><a href="struktur.html">Struktur Kepengurusan 2025/2026</a></li>
+            <li><a href="program.html">Program Kerja</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
 
 <div class="content-wrapper">
     <h2>Visi & Misi Unit Pers Mahasiswa</h2>
@@ -112,4 +215,9 @@
     </p>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<footer>
+    &copy; 2025 Unit Pers Mahasiswa UMMI. All rights reserved.
+</footer>
+
+</body>
+</html>
