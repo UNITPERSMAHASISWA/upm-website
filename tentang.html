@@ -1,6 +1,85 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang UPM UMMI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
+    :root {
+        --primary: #800000;
+        --primary-hover: #A52A2A;
+        --text-main: #333;
+        --text-secondary: #555;
+        --bg-gradient: linear-gradient(to bottom, #f0f0f0, #ffffff);
+        --bg-footer: #f9f9f9;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: var(--bg-gradient);
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+        text-align: center;
+        padding: 25px 20px 15px;
+        background: linear-gradient(to right, var(--primary), var(--primary-hover));
+        color: #fff;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
+    }
+    header h1 a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    header h1 a:hover { color: #ffdede; }
+    .tagline {
+        margin-top: 5px;
+        color: #ffdede;
+        font-size: 14px;
+    }
+
+    /* Navigasi */
+    nav {
+        margin-top: 15px;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+        background: var(--primary-hover);
+    }
+
+    /* Konten Tentang */
     .about-container {
         max-width: 900px;
         margin: 50px auto;
@@ -10,7 +89,6 @@
         box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         animation: fadeIn 0.6s ease-in-out;
     }
-
     .about-container h2 {
         text-align: center;
         color: var(--primary);
@@ -18,7 +96,6 @@
         margin-bottom: 25px;
         position: relative;
     }
-
     .about-container h2::after {
         content: '';
         display: block;
@@ -28,13 +105,23 @@
         margin: 10px auto 0;
         border-radius: 3px;
     }
-
     .about-container p {
         text-align: justify;
         line-height: 1.8;
         color: var(--text-main);
         margin-bottom: 18px;
         font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        margin-top: auto;
+        color: #777;
+        font-size: 14px;
+        background: var(--bg-footer);
+        border-top: 1px solid #eee;
     }
 
     /* Animasi Fade In */
@@ -45,32 +132,55 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+        header h1 { font-size: 22px; }
         .about-container { padding: 30px 20px; margin: 30px auto; }
         .about-container h2 { font-size: 22px; }
         .about-container p { font-size: 14px; }
     }
-</style>
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><a href="index.html">Unit Pers Mahasiswa UMMI</a></h1>
+  <div class="tagline">Be Smart, Be Brave, Be Honour</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html" class="active">Tentang</a></li>
+      <li><a href="visi-misi-tujuan-fungsi.html">Visi & Misi</a></li>
+      <li><a href="struktur.html">Struktur Kepengurusan 2025/2026</a></li>
+      <li><a href="program.html">Program Kerja</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="about-container">
-    <h2>Tentang Unit Pers Mahasiswa (UPM)</h2>
+  <h2>Tentang Unit Pers Mahasiswa (UPM)</h2>
 
-    <p>
-        Unit Pers Mahasiswa (UPM) Universitas Muhammadiyah Sukabumi (UMMI) merupakan organisasi pers kampus 
-        yang berdiri pada tanggal 20 Mei 2014. 
-        UPM memiliki media resmi bernama <strong>LENTERA</strong> yang ditetapkan pada tanggal 15 Juli 2023 
-        sebagai identitas publikasi resmi organisasi ini.
-    </p>
+  <p>
+      Unit Pers Mahasiswa (UPM) Universitas Muhammadiyah Sukabumi (UMMI) merupakan organisasi pers kampus 
+      yang berdiri pada tanggal 20 Mei 2014. 
+      UPM memiliki media resmi bernama <strong>LENTERA</strong> yang ditetapkan pada tanggal 15 Juli 2023 
+      sebagai identitas publikasi resmi organisasi ini.
+  </p>
 
-    <p>
-        Sebagai media kampus, UPM berkedudukan di lingkungan Kampus Universitas Muhammadiyah Sukabumi. 
-        UPM berperan memberikan informasi yang edukatif, reflektif, dan inspiratif bagi seluruh civitas akademika.
-    </p>
+  <p>
+      Sebagai media kampus, UPM berkedudukan di lingkungan Kampus Universitas Muhammadiyah Sukabumi. 
+      UPM berperan memberikan informasi yang edukatif, reflektif, dan inspiratif bagi seluruh civitas akademika.
+  </p>
 
-    <p>
-        Dalam menjalankan tugasnya, UPM berasaskan Pancasila, UUD 1945, dan Catur Dharma Perguruan Tinggi Muhammadiyah, 
-        serta berlandaskan AD/ART Keluarga Mahasiswa (KM) UMMI. 
-        Prinsip ini menjadi pedoman dalam menjaga profesionalitas, objektivitas, dan integritas sebagai media kampus.
-    </p>
+  <p>
+      Dalam menjalankan tugasnya, UPM berasaskan Pancasila, UUD 1945, dan Catur Dharma Perguruan Tinggi Muhammadiyah, 
+      serta berlandaskan AD/ART Keluarga Mahasiswa (KM) UMMI. 
+      Prinsip ini menjadi pedoman dalam menjaga profesionalitas, objektivitas, dan integritas sebagai media kampus.
+  </p>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<footer>
+  &copy; 2025 Unit Pers Mahasiswa UMMI. All rights reserved.
+</footer>
+
+</body>
+</html>
